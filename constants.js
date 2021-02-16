@@ -1,0 +1,3 @@
+let character; 
+let backgroundImage;
+

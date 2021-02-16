@@ -1,11 +1,9 @@
 // Preload all images and Assets 
 
-let backgroundImage;
-
 function preload (){ 
     console.log('Preload');
-    backgroundImage = loadImage ('/city.png');
-    characterImage = loadImage ('/fauci.png')
+    backgroundImage = loadImage ('/assets/city.png');
+    characterImage = loadImage ('/assets/fauci.png')
     
 }
 
@@ -14,7 +12,7 @@ function preload (){
 const game = new Game ();
 
 
-// Setup - Call all functins for canvas to start working
+// Setup - Calls all functins for canvas to start working
 
 function setup (){ 
     createCanvas (900,400);
@@ -22,8 +20,7 @@ function setup (){
 
 }
 
-
-/// Draw Function 
+/// Draw Functions 
 
 function draw (){ 
     clear();
@@ -31,7 +28,6 @@ function draw (){
     game.draw();
 
 }
-
 
 // Press function - for anytime we press on a keyboard 
 
