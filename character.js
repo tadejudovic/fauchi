@@ -1,24 +1,24 @@
 class Character { 
     constructor (){ 
-        this.x = 100;
-        this.y = 0;
-        this.width = 40; 
-        this.height = 40;
-        this.gravity = 0.2;
-        this.velocity = 0;
-        this.floor = 210;
-        this.jumpCounts = 0;
-    }
-
+        this.x = 150;
+        this.y = 90;
+        this.width = 60; 
+        this.height = 140 ;
+        this.gravity = 2    ;
+        this.velocity = 0.2  ;
+        this.floor = 200;
+        this.jumpCounts = 0; 
+    } 
+   
 jump (){ 
 
     if (this.jumpCounts === 2){ 
         console.log('here');
         return;
     }
-    this.jumpCounts++;
-    this.y -= 10;
-    this.velocity -= 5;
+    this.jumpCounts++; 
+    this.y -= 100;
+    this.velocity -= 5;0
     }
 
 draw(){ 
@@ -31,6 +31,7 @@ draw(){
     this.jumpCounts=0;
     this.velocity=0;
 
+    console.log(this)
     image(character, this.x, this.y, this.width, this.height);
     } 
 }

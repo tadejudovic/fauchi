@@ -1,46 +1,36 @@
-// Preload all images and Assets 
+// Preload all images and Assets
 
-function preload (){ 
-    console.log('Preload');
-    backgroundImage = loadImage ('/assets/city.png');
-    characterImage = loadImage ('/assets/fauci.png')
-    
+function preload() {
+  console.log("Preload");
+  backgroundImage = loadImage("./assets/city.png");
+  character = loadImage("./assets/fauci.png");
+  mask = loadImage ("./assets/mask.png")
+
 }
 
 // Starts,  Initalises the entire game
 
-const game = new Game ();
-
+const game = new Game();
 
 // Setup - Calls all functins for canvas to start working
 
-function setup (){ 
-    createCanvas (900,400);
-    game.setup();
-
+function setup() {
+  createCanvas(900, 400);
+  game.setup();
 }
 
+/// Draw Functions
 
-
-/// Draw Functions 
-
-function draw (){ 
-    clear();
-    background('orange');
-    game.draw();
-
+function draw() {
+  clear();
+  background("orange");
+  game.draw();
 }
 
-// Press function - for anytime we press on a keyboard 
+// Press function - for anytime we press on a keyboard
 
-function keyPressed (){
-    if (keyCode === 32){ 
-        game.player.jump(10);
-    }
-
+function keyPressed() {
+  if (keyCode === 32) {
+    game.player.jump(10);
+  }
 }
-
-
-
-
-
