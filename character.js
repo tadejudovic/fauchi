@@ -12,13 +12,13 @@ class Character {
    
 jump (){ 
 
-    if (this.jumpCounts === 2){ 
+    if (this.jumpCounts === 3){ 
         console.log('here');
         return;
     }
     this.jumpCounts++; 
-    this.y -= 100;
-    this.velocity -= 5;0
+    this.y -= 80    ;
+    this.velocity -= 0.5    ;
     }
 
 draw(){ 
@@ -28,7 +28,7 @@ draw(){
     if (this.y > this.floor){ 
         this.y = this.floor;
     }
-    this.jumpCounts=0;
+    this.jumpCounts=2;
     this.velocity=0;
 
     console.log(this)

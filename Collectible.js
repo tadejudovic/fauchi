@@ -1,22 +1,20 @@
-class Obstacle {
+class Collectibles {
     constructor() {
       this.x = width;
-      this.width = 80;
-      this.height = 80;
+      this.width = 50;
+      this.height = 50;
       this.y = random(0, height);
   
     }
+  
     draw() { 
-        image(trump, this.x, this.y, this.width, this.height);
+        image(mask, this.x, this.y, this.width, this.height);
 
       this.x -= 3;
     } 
  
  
   } 
-
-
-
 
 
 
