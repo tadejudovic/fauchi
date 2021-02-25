@@ -7,7 +7,7 @@ function preload() {
   mask = loadImage ("./assets/mask.png");
   trump = loadImage ("./assets/trump2.png");
   fauciImage = loadImage("./assets/fauci.png");
-song.play()
+  song.play()
 
 }
 
