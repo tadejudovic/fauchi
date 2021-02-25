@@ -34,4 +34,6 @@ draw(){
     console.log(this)
     image(character, this.x, this.y, this.width, this.height);
     } 
-}
+
+
+}}
