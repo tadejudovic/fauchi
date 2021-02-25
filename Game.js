@@ -27,9 +27,10 @@ class Game {
       }
 
       if (this.colisionCheck(obstacle, this.player)) {
-        console.log("ooopsi, you crashed!");
+        console.log("ooopsi, you crashed!" );
 
         noLoop();
+        
       }
     }
     );
@@ -45,6 +46,8 @@ class Game {
           console.log("mask collect")
           this.collectible.splice(index,1)
           ;
+          const prevScore = parseInt(scoreElem.html().substring(8));
+    scoreElem.html('Score = ' + (prevScore +1));
   
    
         };  
@@ -54,19 +57,19 @@ class Game {
   } 
  
   colisionCheck(object, player) {
-    if (player.x + player.width < object.x) {
+    if (player.x + player.width < object.x+18) {
+      return false;
+    }
+ 
+    if (object.x + object.width < player.x+12) {
       return false;
     }
 
-    if (object.x + object.width < player.x) {
+    if (player.y+12 > object.y + object.height) {
       return false;
     }
 
-    if (player.y > object.y + object.height) {
-      return false;
-    }
-
-    if (object.y > player.y + player.height) {
+    if (object.y+12  > player.y + player.height) {
       return false;
     }
     return true;

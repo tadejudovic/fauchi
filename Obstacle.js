@@ -9,7 +9,7 @@ class Obstacle {
     draw() { 
         image(trump, this.x, this.y, this.width, this.height);
 
-      this.x -= 3;
+      this.x -= 5;
     } 
  
  

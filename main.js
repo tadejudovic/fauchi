@@ -21,29 +21,44 @@ const game = new Game();
 
 function setup() {
     createCanvas(900, 400);
+  scoreElem = createDiv('Score = 0');
+  scoreElem.position(20, 20);
+  scoreElem.id = 'score';
+  scoreElem.style('color', 'white');
   game.setup();
 }
 
 /// Draw Functions
 function draw() { 
-   if (screen == 0){ 
+    if (screen == 0){ 
        return startScreen()
    } else if (screen >=  1){ 
-    clear();
        game.draw();
+       
    }
 
 }
  
 // Press function - for anytime we press on a keyboard
 
+
+
 function keyPressed() {
+    if (keyCode == RETURN) {
+        screen = 0;
+       draw()
+    }
+
+
   if (keyCode === 32) {
     game.player.jump(10);
     return screen+=1;
  
   }
-  }
+
+
+}
+  
   
 // Intro, start screen 
 function startScreen(){
@@ -57,5 +72,7 @@ function startScreen(){
 
 
 // 
+
+
 
 
