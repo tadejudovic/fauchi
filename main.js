@@ -46,7 +46,7 @@ function draw() {
 function keyPressed() {
     if (keyCode == RETURN) {
         screen = 0;
-        redraw();
+        draw();
     }
 
 
