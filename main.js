@@ -11,7 +11,6 @@ function preload() {
 
 }
 
-
 // Starts,  Initalises the entire game
 
 const game = new Game();
@@ -47,6 +46,7 @@ function keyPressed() {
     if (keyCode == RETURN) {
         screen = 0;
         draw();
+        
     }
 
 
