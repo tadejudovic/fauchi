@@ -28,7 +28,8 @@ class Game {
 
       if (this.colisionCheck(obstacle, this.player)) {
         console.log("ooopsi, you crashed!" );
-
+        songFired.play();
+        
         noLoop();
         
       }
@@ -49,7 +50,8 @@ class Game {
           const prevScore = parseInt(scoreElem.html().substring(8));
     scoreElem.html('Score = ' + (prevScore +1));
   
-   
+    songCollected.play()
+
         };  
       }
       );
